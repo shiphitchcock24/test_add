@@ -6,8 +6,8 @@ jobs:
         pull: false
       - IN: sp-tpdopts
       - IN: sp-params1
-        applyTo:
-          - sp-image1
+      #  applyTo:
+       #   - sp-image1
       - TASK: managed
       - IN: triggersp1
     #on_success:
