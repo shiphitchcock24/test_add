@@ -75,6 +75,16 @@ resources:
       publishAllPorts : true
       #publishAllPorts assigns a public ip to the container and gives endpoint
       #for accessing the exposed ports.
+      
+  - name: sp-tpdopts1
+    type: dockerOptions
+    version:
+      memory: 200
+      #Triton has standard values for memory 128,512 etc.
+      #If non standard values is given in the memory, it chooses the closest
+      #standard memory value. Triton also uses this value to choose the plan
+      #and cpu-shares
+      publishAllPorts : false
 
   - name: sp-params1
     type: params
