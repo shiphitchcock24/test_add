@@ -2,7 +2,7 @@ jobs:
   - name: sp-manifest1
     type: manifest
     steps:
-      - IN: sp-image1
+      - IN: sp-image2
         pull: false
       - IN: sp-tpdopts
       - IN: sp-params1
@@ -18,7 +18,7 @@ jobs:
   - name: sp-manifest2
     type: manifest
     steps:
-      - IN: sp-image2
+      - IN: sp-image1
         pull: false
       - IN: sp-tpdopts1
       - IN: triggersp2
