@@ -2,12 +2,12 @@ triggers:
    - name: triggersp1
      type: trigger
      version:
-       counter: 6
+       counter: 7
        
    - name: triggersp2
      type: trigger
      version:
-       counter: 5
+       counter: 6
        
    - name: triggersp3
      type: trigger
