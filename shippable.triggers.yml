@@ -1,5 +1,15 @@
 triggers:
-   - name: trigger-dv-man
+   - name: triggersp1
+     type: trigger
+     version:
+       counter: 1
+       
+   - name: triggersp2
+     type: trigger
+     version:
+       counter: 1
+       
+   - name: triggersp3
      type: trigger
      version:
        counter: 1
