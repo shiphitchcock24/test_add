@@ -25,14 +25,23 @@ jobs:
       - IN: sp-params2
       - TASK: managed
   
-  - name: sp-tpdeploy1
+  #- name: sp-tpdeploy1
+   # type: tripubDeploy
+    #steps:
+     # - IN: sp-manifest1
+      #- IN: sp-manifest2
+      #- IN: tripub-cluster
+      #- TASK: managed
+       # deployMethod: upgrade
+        
+  - name: sp-tpdeploy2
     type: tripubDeploy
     steps:
       - IN: sp-manifest1
       - IN: sp-manifest2
       - IN: tripub-cluster
       - TASK: managed
-        deployMethod: upgrade
+        deployMethod: blueGreen
         
  # - name: release-one
   #  type: release
