@@ -1,104 +1,91 @@
 jobs:
-  - name: dv-man
+  - name: sp-manifest1
     type: manifest
     steps:
-      - IN: dv-image
+      - IN: sp-image1
         pull: false
-      - IN: dv-opts
-      - IN: dv-params
+      - IN: sp-tpdopts
+      - IN: sp-params1
         applyTo:
-          - dv-image
+          - sp-image1
       - TASK: managed
-      - IN: trigger-dv-man
-    on_success:
-      - echo 'this is on_success step of dv-man of type manifest'
-    on_failure:
-      - echo 'this is on_failure step of dv-man of type manifest'
-
-  - name: dv-test
-    type: ecsDeploy
-    steps:
-      - IN: dv-man
-      - IN: env-test
-      - TASK: managed
-        deployMethod: upgrade
-    on_success:
-      - echo 'this is on_success step of dv-test of type ecsDeploy'
-
-  - name: box-man
+      - IN: triggersp1
+    #on_success:
+     # - echo 'this is on_success step of dv-man of type manifest'
+    #on_failure:
+     # - echo 'this is on_failure step of dv-man of type manifest'
+     
+  - name: sp-manifest2
     type: manifest
     steps:
-      - IN: box-image
+      - IN: sp-image2
         pull: false
-      - IN: box-opts
-      - IN: box-params
+      - IN: sp-tpdopts1
+      - IN: sp-params2
       - TASK: managed
-
-  - name: box-test
-    type: ecsDeploy
+  
+  - name: sp-tpdeploy1
+    type: tripubDeploy
     steps:
-      - IN: box-man
-      - IN: env-test
+      - IN: sp-manifest1
+      - IN: sp-manifest2
+      - IN: tripub-cluster
       - TASK: managed
         deployMethod: upgrade
-
-  - name: box-dcl
-    type: dclDeploy
-    steps:
-      - IN: box-man
-      - IN: env-dcl
-      - TASK: managed
-
-  - name: box-gke
-    type: gkeDeploy
-    steps:
-      - IN: box-man
-      - IN: env-gke
-      - TASK: managed
-
-  - name: box-prod
-    type: ecsDeploy
-    steps:
-      - IN: box-man
-      - IN: env-prod
-      - TASK: managed
-
-  - name: multi-manifest
-    type:  ecsDeploy
-    steps:
-      - IN: box-man
-      - IN: dv-man
-      - IN: env-test
-      - TASK: managed
-        deployMethod: upgrade
-
+        
   - name: release-one
     type: release
     steps:
       - IN: version-resource
-      - IN: dv-man
+      - IN: sp-manifest1
       - TASK: managed
-        bump: major
+        bump: patch
 
-  - name: box-tripub-man
-    type: manifest
-    steps:
-      - IN: box-image
-        pull: false
-      - IN: box-tripub-opts
-      - TASK: managed
+ # - name: dv-test
+  #  type: ecsDeploy
+   # steps:
+    #  - IN: dv-man
+     # - IN: env-test
+      #- TASK: managed
+       # deployMethod: upgrade
+    #on_success:
+     # - echo 'this is on_success step of dv-test of type ecsDeploy'
 
-  - name: box-tripub
-    type: tripubDeploy
-    steps:
-      - IN: box-tripub-man
-      - IN: env-tripub
-      - TASK: managed
+  #- name: box-test
+   # type: ecsDeploy
+    #steps:
+     # - IN: box-man
+      #- IN: env-test
+    #  - TASK: managed
+     #   deployMethod: upgrade
 
-  - name: infra-provision
-    type: runSh
-    steps:
-      - IN: infra-repo
-      - TASK:
-        - script: ls
-        - script: ./GET/infra-repo/infra-repo/provision.sh
+  #- name: box-dcl
+   # type: dclDeploy
+    #steps:
+     # - IN: box-man
+      #- IN: env-dcl
+      #- TASK: managed
+
+  #- name: box-gke
+    #type: gkeDeploy
+   # steps:
+    #  - IN: box-man
+     # - IN: env-gke
+      #- TASK: managed
+
+  #- name: multi-manifest
+   # type:  ecsDeploy
+    #steps:
+     # - IN: box-man
+      #- IN: dv-man
+      #- IN: env-test
+      #- TASK: managed
+       # deployMethod: upgrade
+
+  #- name: infra-provision
+   # type: runSh
+    #steps:
+     # - IN: infra-repo
+      #- TASK:
+       # - script: ls
+        #- script: ./GET/infra-repo/infra-repo/provision.sh
