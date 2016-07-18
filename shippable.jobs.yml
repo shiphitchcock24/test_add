@@ -2,7 +2,7 @@ jobs:
   - name: sp-manifest1
     type: manifest
     steps:
-      - IN: plv2-image2
+      - IN: plv2-image1
         pull: false
       - IN: plv2-dopts1
       - IN: plv2-params1
@@ -40,7 +40,7 @@ jobs:
       - IN: sp-manifest1
       #- IN: sp-manifest2
       - IN: plv2-tpcluster
-      #- TASK: managed
+      - TASK: managed
        # deployMethod: blueGreen
         
  # - name: release-one
