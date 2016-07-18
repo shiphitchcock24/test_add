@@ -15,7 +15,7 @@ jobs:
     #on_failure:
      # - echo 'this is on_failure step of dv-man of type manifest'
         
-  - name: sp-tpdeploy2
+  - name: plv2-tpdeploy1
     type: tripubDeploy
     steps:
       - IN: plv2-manifest1
