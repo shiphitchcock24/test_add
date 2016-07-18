@@ -49,6 +49,14 @@ resources:
       sourceName: "scriptnull/busybox"
     seed:
       versionName: "nodeenv"
+      
+  - name: plv2-imgdoesntexist
+    type: image
+    integration: cock1-hub
+    pointer:
+      sourceName: "shiphitchcock1/busybox"
+    seed:
+      versionName: "node"
 
   - name: plv2-dopts1
     type: dockerOptions
