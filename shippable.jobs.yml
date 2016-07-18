@@ -4,7 +4,7 @@ jobs:
     steps:
       - IN: plv2-image1
         pull: false
-      - IN: plv2-dopts1
+      - IN: plv2-tpdopts
       - IN: plv2-params1
       #  applyTo:
        #   - sp-image1
