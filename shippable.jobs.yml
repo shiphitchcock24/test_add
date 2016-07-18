@@ -34,12 +34,12 @@ jobs:
       #- TASK: managed
        # deployMethod: upgrade
         
-  #- name: sp-tpdeploy2
-   # type: tripubDeploy
-    #steps:
-     # - IN: sp-manifest1
+  - name: sp-tpdeploy2
+    type: tripubDeploy
+    steps:
+      - IN: sp-manifest1
       #- IN: sp-manifest2
-      #- IN: tripub-cluster
+      - IN: plv2-tpcluster
       #- TASK: managed
        # deployMethod: blueGreen
         
