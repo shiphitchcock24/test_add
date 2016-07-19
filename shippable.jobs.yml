@@ -24,14 +24,14 @@ jobs:
       - TASK: managed
       - IN: triggerv2sp2
         
-  - name: plv2-tpdeploy1
-    type: tripubDeploy
-    steps:
-      - IN: plv2-manifest1
+ # - name: plv2-tpdeploy1
+  #  type: tripubDeploy
+   # steps:
+    #  - IN: plv2-manifest1
       #- IN: sp-manifest2
-      - IN: plv2-tpcluster
-      - TASK: managed
-        deployMethod: upgrade
+      #- IN: plv2-tpcluster
+     # - TASK: managed
+       # deployMethod: upgrade
         
   - name: release-one
     type: release
