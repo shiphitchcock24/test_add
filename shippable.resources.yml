@@ -106,6 +106,47 @@ resources:
       #standard memory value. Triton also uses this value to choose the plan
       #and cpu-shares
       publishAllPorts : false
+      
+  - name: plv2ecs-OtherDOpts
+    type: dockerOptions
+    integration: varshaarun-ecs
+    version:
+      memory: 48
+      cpuShares: 5
+      links:
+        - "one:1"
+        - "two:2"
+      cmd: mongo
+      privileged: false
+      user: testuser
+     # volumes:
+      #  - "/host/path.2:/container/path:rw"
+       # - "/host/path:/container/path2:rw"
+      #  - "/host/path2:/container/path3:ro"
+       # - "/host/path..2:/container/path4:rw"
+      #  - "/host/path..3:/container/path5:ro"
+      dnsServers:
+        - "127.0.0.1"
+        - "8.8.8.8"
+      dnsSearch:
+        - "127.0.0.1"
+        - "8.8.8.8"
+      logConfig:
+        type: "json-file"
+        options:
+          test: test
+      ulimits:
+        - name: cpu
+          hard: 5
+          soft: 3
+        - name: core
+          hard: 10
+          soft: 5
+      labels:
+        labelone: valueOne
+        labeltwo: valueTwo
+      portMappings:
+        - "80:80"
 
   - name: plv2-params1
     type: params
