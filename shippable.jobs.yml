@@ -40,6 +40,14 @@ jobs:
       - IN: plv2-image2
       - IN: triggerv2sp4
       - TASK: managed
+      
+  - name: plv2-manifest5
+    type: manifest
+    steps:
+      - IN: plv2-image2
+      - IN: triggerv2sp5
+      - IN: plv2ecs-OtherDOpts
+      - TASK: managed
 
   - name: release-one
     type: release
@@ -107,3 +115,11 @@ jobs:
       - IN: plv2-tpdopts1
       - TASK: managed
         deployMethod: blueGreen
+        
+  - name: plv2-ecsdeploy2
+    type: ecsDeploy
+    steps:
+      - IN: plv2-manifest5
+      - IN: ecs-cluster
+      - TASK: managed
+        #deployMethod: upgrade
