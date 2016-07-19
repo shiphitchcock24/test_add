@@ -22,4 +22,4 @@ triggers:
    - name: triggerv2sp5
      type: trigger
      version:
-       counter: 2
+       counter: 3
