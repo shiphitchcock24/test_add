@@ -16,6 +16,13 @@ jobs:
      # - echo 'this is on_success step of dv-man of type manifest'
     #on_failure:
      # - echo 'this is on_failure step of dv-man of type manifest'
+     
+  - name: plv2-manifest2
+    type: manifest
+    steps:
+      - IN: plv2-image2
+      - TASK: managed
+      - IN: triggerv2sp2
         
   - name: plv2-tpdeploy1
     type: tripubDeploy
