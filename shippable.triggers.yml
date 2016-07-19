@@ -13,3 +13,8 @@ triggers:
      type: trigger
      version:
        counter: 1
+       
+   - name: triggerv2sp4
+     type: trigger
+     version:
+       counter: 1
