@@ -20,7 +20,7 @@ jobs:
   - name: plv2-manifest2
     type: manifest
     steps:
-      - IN: plv2-image2
+      - IN: plv2-image1
       - TASK: managed
       - IN: triggerv2sp2
         
