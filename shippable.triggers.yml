@@ -2,19 +2,19 @@ triggers:
    - name: triggerv2sp1
      type: trigger
      version:
-       counter: 8
+       counter: 9
        
    - name: triggerv2sp2
      type: trigger
      version:
-       counter: 3
+       counter: 10
        
    - name: triggerv2sp3
      type: trigger
      version:
-       counter: 1
+       counter: 11
        
    - name: triggerv2sp4
      type: trigger
      version:
-       counter: 1
+       counter: 12
