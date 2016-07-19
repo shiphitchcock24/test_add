@@ -31,8 +31,8 @@ jobs:
     type: manifest
     steps:
       - IN: plv2-image2
-      - TASK: managed
       - IN: plv2-manifest2
+      - TASK: managed
       
   - name: plv2-manifest4
     type: manifest
