@@ -36,7 +36,7 @@ jobs:
     type: ddcDeploy
     steps:
       - IN: plv2-manifest2
-      - IN: ddc-cluster
+      - IN: ecs-cluster
       - TASK: managed
 
  # - name: b-mon-dcl
@@ -50,26 +50,26 @@ jobs:
     type: ecsDeploy
     steps:
       - IN: plv2-manifest2
-      - IN: ecs-cluster
+      - IN: gke-cluster
       - TASK: managed
 
   - name: plv2-gkedeploy
     type: gkeDeploy
     steps:
       - IN: plv2-manifest2
-      - IN: gke-cluster
+      - IN: tripub-cluster1
       - TASK: managed
 
   - name: plv2-tripubdeploy
     type: tripubDeploy
     steps:
       - IN: plv2-manifest2
-      - IN: tripub-cluster1
+      - IN: gke-cluster
       - TASK: managed
 
   - name: plv2-tripubdeploy2
     type: tripubDeploy
     steps:
       - IN: plv2-manifest2
-      - IN: tripub-cluster2
+      - IN: ddc-cluster
       - TASK: managed
