@@ -113,9 +113,9 @@ resources:
     version:
       memory: 48
       cpuShares: 5
-      links:
-        - "one:1"
-        - "two:2"
+      #links:
+       # - "one:1"
+        #- "two:2"
       cmd: mongo
       privileged: false
       user: testuser
