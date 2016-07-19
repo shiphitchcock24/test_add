@@ -23,16 +23,7 @@ jobs:
       - IN: plv2-image1
       - TASK: managed
       - IN: triggerv2sp2
-        
- # - name: plv2-tpdeploy1
-  #  type: tripubDeploy
-   # steps:
-    #  - IN: plv2-manifest1
-      #- IN: sp-manifest2
-      #- IN: plv2-tpcluster
-     # - TASK: managed
-       # deployMethod: upgrade
-        
+
   - name: release-one
     type: release
     steps:
@@ -40,52 +31,45 @@ jobs:
       - IN: plv2-manifest1
       - TASK: managed
         bump: minor
+        
+  - name: plv2-ddcdeploy
+    type: ddcDeploy
+    steps:
+      - IN: plv2-manifest2
+      - IN: ddc-cluster
+      - TASK: managed
 
- # - name: dv-test
-  #  type: ecsDeploy
+ # - name: b-mon-dcl
+  #  type: dclDeploy
    # steps:
-    #  - IN: dv-man
-     # - IN: env-test
-      #- TASK: managed
-       # deployMethod: upgrade
-    #on_success:
-     # - echo 'this is on_success step of dv-test of type ecsDeploy'
-
-  #- name: box-test
-   # type: ecsDeploy
-    #steps:
-     # - IN: box-man
-      #- IN: env-test
-    #  - TASK: managed
-     #   deployMethod: upgrade
-
-  #- name: box-dcl
-   # type: dclDeploy
-    #steps:
-     # - IN: box-man
-      #- IN: env-dcl
+    #  - IN: plv2-manifest2
+     # - IN: dcl-cluster
       #- TASK: managed
 
-  #- name: box-gke
-    #type: gkeDeploy
-   # steps:
-    #  - IN: box-man
-     # - IN: env-gke
-      #- TASK: managed
+  - name: plv2-ecsdeploy
+    type: ecsDeploy
+    steps:
+      - IN: plv2-manifest2
+      - IN: ecs-cluster
+      - TASK: managed
 
-  #- name: multi-manifest
-   # type:  ecsDeploy
-    #steps:
-     # - IN: box-man
-      #- IN: dv-man
-      #- IN: env-test
-      #- TASK: managed
-       # deployMethod: upgrade
+  - name: plv2-gkedeploy
+    type: gkeDeploy
+    steps:
+      - IN: plv2-manifest2
+      - IN: gke-cluster
+      - TASK: managed
 
-  #- name: infra-provision
-   # type: runSh
-    #steps:
-     # - IN: infra-repo
-      #- TASK:
-       # - script: ls
-        #- script: ./GET/infra-repo/infra-repo/provision.sh
+  - name: plv2-tripubdeploy
+    type: tripubDeploy
+    steps:
+      - IN: plv2-manifest2
+      - IN: tripub-cluster1
+      - TASK: managed
+
+  - name: plv2-tripubdeploy2
+    type: tripubDeploy
+    steps:
+      - IN: plv2-manifest2
+      - IN: tripub-cluster2
+      - TASK: managed
