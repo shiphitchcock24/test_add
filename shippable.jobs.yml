@@ -54,6 +54,7 @@ jobs:
     steps:
       - IN: plv2-manifest2
       - IN: ddc-cluster
+      - IN: plv2-opts2
       - TASK: managed
 
  # - name: b-mon-dcl
