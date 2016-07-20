@@ -113,9 +113,9 @@ resources:
     version:
       memory: 48
       cpuShares: 2
-      #links:
-       # - "one:1"
-        #- "two:2"
+      links:
+        - "one:1"
+        - "two:2"
       cmd:
         - "pwd"
         - "true"
@@ -130,6 +130,7 @@ resources:
         - "/host/path2:/container/path3:ro"
        # - "/host/path..2:/container/path4:rw"
         - "/host/path..3:/container/path5:ro"
+        - "/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz:/container/path6:ro"
       dnsServers:
         - "127.0.0.1"
         #- "8.8.8.8"
