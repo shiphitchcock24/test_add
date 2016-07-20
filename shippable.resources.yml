@@ -132,10 +132,10 @@ resources:
         - "/host/path..3:/container/path5:ro"
       dnsServers:
         - "127.0.0.1"
-        - "8.8.8.8"
+        #- "8.8.8.8"
       dnsSearch:
         - "127.0.0.1"
-        - "8.8.8.8"
+        #- "8.8.8.8"
       logConfig:
         type: "json-file"
         options:
