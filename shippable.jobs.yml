@@ -119,7 +119,7 @@ jobs:
   - name: plv2-ecsdeploy2
     type: ecsDeploy
     steps:
-      - IN: plv2-manifest5
       - IN: ecs-cluster
+      - IN: plv2-manifest5
       - TASK: managed
-        #deployMethod: upgrade
+        deployMethod: upgrade
