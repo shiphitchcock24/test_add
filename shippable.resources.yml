@@ -116,7 +116,7 @@ resources:
       #links:
        # - "one:1"
         #- "two:2"
-      cmd: mongo
+      cmd: echo "test"
       privileged: false
       user: testuser
      # volumes:
