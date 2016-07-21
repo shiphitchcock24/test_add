@@ -56,6 +56,14 @@ jobs:
       - IN: triggerv2sp6
       - IN: plv2-dopts1
       - TASK: managed
+      
+  - name: plv2gke-manifest7
+    type: manifest
+    steps:
+      - IN: plv2-image2
+      - IN: triggerv2sp7
+      - IN: plv2gke-dopts4
+      - TASK: managed
 
   - name: release-one
     type: release
@@ -91,8 +99,7 @@ jobs:
   - name: plv2-gkedeploy
     type: gkeDeploy
     steps:
-      - IN: plv2-manifest2
-      - IN: plv2gke-dopts4
+      - IN: plv2gke-manifest7
       - IN: gke-cluster
       - TASK: managed
         deployMethod: upgrade
