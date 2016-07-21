@@ -37,4 +37,4 @@ triggers:
    - name: triggerv2sp8
      type: trigger
      version:
-       counter: 1
+       counter: 2
