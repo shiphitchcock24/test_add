@@ -48,6 +48,14 @@ jobs:
       - IN: triggerv2sp5
       - IN: plv2ecs-OtherDOpts
       - TASK: managed
+      
+  - name: plv2upgrade-manifest6
+    type: manifest
+    steps:
+      - IN: plv2-image2
+      - IN: triggerv2sp6
+      - IN: plv2-dopts1
+      - TASK: managed
 
   - name: release-one
     type: release
@@ -121,5 +129,13 @@ jobs:
     steps:
       - IN: ecs-cluster
       - IN: plv2-manifest5
+      - TASK: managed
+        deployMethod: upgrade
+
+  - name: plv2upgrade-ecsdeploy
+    type: ecsDeploy
+    steps:
+      - IN: ecs-cluster
+      - IN: plv2upgrade-manifest6
       - TASK: managed
         deployMethod: upgrade
