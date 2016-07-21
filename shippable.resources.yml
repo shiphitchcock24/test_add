@@ -105,7 +105,7 @@ resources:
         - "pwd"
         - "true"
       privileged: false
-      user: testuser
+      #user: testuser
       #volumes:
        # - "/host/path.2:/container/path:rw"
       #  - "/host/path:/container/path2:rw"
