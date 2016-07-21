@@ -129,6 +129,14 @@ resources:
       #publishAllPorts assigns a public ip to the container and gives endpoint
       #for accessing the exposed ports.
       
+  - name: plv2ecs-dopts5
+    type: dockerOptions
+    version:
+      memory: 100
+      cpuShares: 0
+      links:
+        - "plv2upgrade-ecsdeploy81de65e0-beec-4cd6-969f-0529e7858392"
+      
   - name: plv2-tpdopts1
     type: dockerOptions
     version:
