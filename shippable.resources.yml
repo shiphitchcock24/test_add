@@ -70,6 +70,29 @@ resources:
       sourceName: "shiphitchcock1/busybox"
     seed:
       versionName: "node"
+      
+  - name: plv2-imagewithopts
+    type: image
+    integration: scriptnull-docker
+    pointer:
+      sourceName: "scriptnull/debian"
+    seed:
+      versionName: "driftking"
+
+  - name: plv2tp-dopts7
+    type: dockerOptions
+    version:
+      memory: 128
+      user: "driftking"
+      workingDir: "/makemeworking"
+      publishAllPorts: true
+      cmd:
+        - "node"
+        - "job.js"
+      dnsServers:
+        - "127.0.8.1"
+      dnsSearch:
+        - "127.8.0.1"
 
   - name: plv2-dopts1
     type: dockerOptions
