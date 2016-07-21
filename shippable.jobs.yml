@@ -92,6 +92,7 @@ jobs:
     type: gkeDeploy
     steps:
       - IN: plv2-manifest2
+      - IN: plv2gke-dopts4
       - IN: gke-cluster
       - TASK: managed
         deployMethod: upgrade
