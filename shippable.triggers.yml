@@ -33,3 +33,8 @@ triggers:
      type: trigger
      version:
        counter: 9
+       
+   - name: triggerv2sp8
+     type: trigger
+     version:
+       counter: 1
