@@ -54,7 +54,7 @@ jobs:
     steps:
       - IN: plv2-image2
       - IN: triggerv2sp6
-      - IN: plv2-dopts1
+     # - IN: plv2-dopts1
       - TASK: managed
       
   - name: plv2gke-manifest7
