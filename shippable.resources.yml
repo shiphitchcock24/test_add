@@ -194,6 +194,11 @@ resources:
         labeltwo: valueTwo
       portMappings:
         - "80:80"
+        
+  - name: plv2ecs-dopts6
+    type: dockerOptions
+    version:
+      user: shiptest
 
   - name: plv2-params1
     type: params
