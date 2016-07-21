@@ -85,6 +85,14 @@ resources:
       memory: 200
       cpuShares: 16
       
+  - name: plv2-invaliddopts3
+    type: dockerOptions
+    version:
+      memory: 200
+      cpuShares: 16
+      links:
+        - "sampletest-ecsdeploy2cef72c3-9d76-410b-861d-c2a8d4cb2886"
+      
   - name: plv2-tpdopts
     type: dockerOptions
     version:
