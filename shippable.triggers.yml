@@ -32,4 +32,4 @@ triggers:
    - name: triggerv2sp7
      type: trigger
      version:
-       counter: 5
+       counter: 6
