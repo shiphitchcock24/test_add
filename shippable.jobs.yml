@@ -90,6 +90,14 @@ jobs:
       #- IN: plv2tp-dopts7
       - TASK: managed
       
+  - name: plv2-manifest11
+    type: manifest
+    steps:
+      - IN: plv2-imgtagdoestexists
+      #- IN: triggerv2sp9
+      #- IN: plv2tp-dopts7
+      - TASK: managed
+      
   - name: release-version1
     type: release
     steps:
