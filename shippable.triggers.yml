@@ -7,7 +7,7 @@ triggers:
    - name: triggerv2sp2
      type: trigger
      version:
-       counter: 15
+       counter: 16
        
    - name: triggerv2sp3
      type: trigger
@@ -17,7 +17,7 @@ triggers:
    - name: triggerv2sp4
      type: trigger
      version:
-       counter: 14
+       counter: 15
        
    - name: triggerv2sp5
      type: trigger
