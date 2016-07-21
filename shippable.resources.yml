@@ -198,7 +198,7 @@ resources:
   - name: plv2ecs-dopts6
     type: dockerOptions
     version:
-      user: shiptest
+      workingDir: "/home/test"
 
   - name: plv2-params1
     type: params
