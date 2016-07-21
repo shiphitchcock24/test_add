@@ -101,9 +101,9 @@ resources:
       entryPoint:
         - "mongod"
       workingDir: "/home/test"
-      #cmd:
-        #- "pwd"
-        #- "true"
+      cmd:
+        - "pwd"
+        - "true"
       #privileged: false
       #user: testuser
       #volumes:
