@@ -23,3 +23,8 @@ triggers:
      type: trigger
      version:
        counter: 17
+       
+   - name: triggerv2sp6
+     type: trigger
+     version:
+       counter: 17
