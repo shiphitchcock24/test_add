@@ -96,24 +96,26 @@ resources:
   - name: plv2gke-dopts4
     type: dockerOptions
     version:
+      memory: 64
+      cpuShares: 2
       entryPoint:
         - "mongod"
-      workingDir: "/home/test"
-      cmd:
-        - "pwd"
-        - "true"
-      privileged: false
-      user: testuser
-      volumes:
-        - "/host/path.2:/container/path:rw"
+      #workingDir: "/home/test"
+      #cmd:
+        #- "pwd"
+        #- "true"
+      #privileged: false
+      #user: testuser
+      #volumes:
+       # - "/host/path.2:/container/path:rw"
       #  - "/host/path:/container/path2:rw"
-        - "/host/path2:/container/path3:ro"
+        #- "/host/path2:/container/path3:ro"
        # - "/host/path..2:/container/path4:rw"
-        - "/host/path..3:/container/path5:ro"
-        - "/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz:/container/path6:ro"
-      labels:
-        labelone: valueOne
-        labeltwo: valueTwo
+        #- "/host/path..3:/container/path5:ro"
+        #- "/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz:/container/path6:ro"
+      #labels:
+        #labelone: valueOne
+       # labeltwo: valueTwo
       
   - name: plv2-tpdopts
     type: dockerOptions
