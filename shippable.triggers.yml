@@ -42,4 +42,4 @@ triggers:
    - name: triggerv2sp9
      type: trigger
      version:
-       counter: 1
+       counter: 2
