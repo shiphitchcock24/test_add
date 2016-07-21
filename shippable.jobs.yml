@@ -73,6 +73,14 @@ jobs:
       - IN: triggerv2sp8
       - IN: plv2ecs-dopts6
       - TASK: managed
+      
+  - name: plv2tp-manifest09
+    type: manifest
+    steps:
+      - IN: plv2-imagewithopts
+      - IN: triggerv2sp9
+      - IN: plv2tp-dopts7
+      - TASK: managed
 
   - name: release-version1
     type: release
