@@ -100,7 +100,7 @@ resources:
       cpuShares: 2
       entryPoint:
         - "mongod"
-      #workingDir: "/home/test"
+      workingDir: "/home/test"
       #cmd:
         #- "pwd"
         #- "true"
