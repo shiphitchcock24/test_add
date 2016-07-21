@@ -38,6 +38,7 @@ jobs:
     type: manifest
     steps:
       - IN: plv2-image2
+      - IN: plv2-tpdopts
       - IN: triggerv2sp4
       - TASK: managed
       
