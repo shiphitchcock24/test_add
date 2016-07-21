@@ -80,7 +80,7 @@ resources:
       
   - name: plv2-imagewithopts
     type: image
-    integration: scriptnull-docker
+    integration: cock1-hub
     pointer:
       sourceName: "scriptnull/debian"
     seed:
