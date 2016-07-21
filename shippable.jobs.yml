@@ -136,6 +136,7 @@ jobs:
     type: ecsDeploy
     steps:
       - IN: ecs-cluster
+      - IN: plv2-invaliddopts3
       - IN: plv2upgrade-manifest6
       - TASK: managed
         deployMethod: upgrade
