@@ -17,7 +17,7 @@ resources:
     pointer:
       sourceName : "testCL"
       region: "us-west-2"
-
+      
   - name: gke-cluster
     type: cluster
     integration: varshaarun-gke
@@ -85,6 +85,14 @@ resources:
       sourceName: "scriptnull/debian"
     seed:
       versionName: "driftking"
+      
+  - name: plv2-image4
+    type: image
+    integration: cock1-hub
+    pointer:
+      sourceName: "shiphitchcock1/betaci_nod_limitless_pl"
+    seed:
+      versionName: "deploy.5"
 
   - name: plv2tp-dopts7
     type: dockerOptions
