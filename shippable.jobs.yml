@@ -66,11 +66,12 @@ jobs:
       - IN: plv2gke-dopts4
       - TASK: managed
 
-  - name: release-one
+  - name: release-version1
     type: release
     steps:
       - IN: plv2-version
       - IN: plv2-manifest1
+      - IN: triggerv2sp2
       - TASK: managed
         bump: minor
         
