@@ -78,6 +78,14 @@ resources:
     seed:
       versionName: "node"
       
+  - name: plv2-imgtagdoestexists
+    type: image
+    integration: cock1-hub
+    pointer:
+      sourceName: "shiphitchcock1/betaci_nod_limitless_pl"
+    seed:
+      versionName: "test"
+      
   - name: plv2-imagewithopts
     type: image
     integration: cock1-hub
