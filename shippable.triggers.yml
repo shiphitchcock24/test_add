@@ -22,7 +22,7 @@ triggers:
    - name: triggerv2sp5
      type: trigger
      version:
-       counter: 17
+       counter: 18
        
    - name: triggerv2sp6
      type: trigger
