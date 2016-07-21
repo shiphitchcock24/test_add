@@ -65,6 +65,14 @@ jobs:
       - IN: triggerv2sp7
       - IN: plv2gke-dopts4
       - TASK: managed
+      
+  - name: plv2ecs-manifest8
+    type: manifest
+    steps:
+      - IN: plv2-image2
+      - IN: triggerv2sp8
+      - IN: plv2ecs-dopts6
+      - TASK: managed
 
   - name: release-version1
     type: release
@@ -150,3 +158,12 @@ jobs:
       - IN: plv2upgrade-manifest6
       - TASK: managed
         deployMethod: upgrade
+        
+  - name: plv2ecs-ecsdeploy7
+    type: ecsDeploy
+    steps:
+      - IN: ecs-cluster
+      - IN: plv2ecs-manifest8
+      - TASK: managed
+        deployMethod: upgrade
+
