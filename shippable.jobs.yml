@@ -123,13 +123,7 @@ jobs:
       - TASK: managed
         deployMethod: upgrade
         
-  - name: plv2-tripubdeploy8
-    type: tripubDeploy
-    steps:
-      - IN: plv2tp-manifest9
-      - IN: tripub-cluster3
-      - TASK: managed
-        deployMethod: upgrade
+  
        
   #- name: plv2-tripubdeploy9
    # type: tripubDeploy
