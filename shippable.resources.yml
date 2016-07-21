@@ -38,6 +38,13 @@ resources:
     pointer:
       sourceName: "default" # we can give anything it deploy instances based on region not by cluster name
       region: "us-east-3"
+      
+  - name: tripub-cluster3
+    type: cluster
+    integration: varshaarun-tripub
+    pointer:
+      sourceName: "default" # we can give anything it deploy instances based on region not by cluster name
+      region: "us-east-2"
 
   - name: plv2-image1
     type: image
