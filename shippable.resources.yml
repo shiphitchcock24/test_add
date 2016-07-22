@@ -1,7 +1,7 @@
 resources:
   - name: ddc-cluster
     type: cluster
-    integration: varshaarun-ddc
+    integration: sreyaj-ddc
     pointer:
       sourceName : "nothing" #we can anything because it is mandatory but ddc doesnot have clusters
 
@@ -13,28 +13,28 @@ resources:
 
   - name: ecs-cluster
     type: cluster
-    integration: varshaarun-ecs
+    integration: ship-awsnew
     pointer:
-      sourceName : "testCL"
+      sourceName : "default"
       region: "us-west-2"
       
   - name: gke-cluster
     type: cluster
-    integration: varshaarun-gke
+    integration: sreyaj-gke
     pointer:
       sourceName: "small-cluster" #name of the cluster we are deploying.
       region: "us-east1-d"
       
-  - name: tripub-cluster3
-    type: cluster
-    integration: varshaarun-tripub
-    pointer:
-      sourceName: "default" # we can give anything it deploy instances based on region not by cluster name
-      region: "us-east-2"
+  #- name: tripub-cluster3
+   # type: cluster
+  #  integration: varshaarun-tripub
+   # pointer:
+    #  sourceName: "default" # we can give anything it deploy instances based on region not by cluster name
+    #  region: "us-east-2"
 
   - name: plv2-image1
     type: image
-    integration: cock1-hub
+    integration: ship4-docker
     pointer:
       sourceName: "shiphitchcock1/betaci_nod_limitless_pl"
     seed:
@@ -42,7 +42,7 @@ resources:
       
   - name: plv2-image2
     type: image
-    integration: cock1-hub
+    integration: ship4-docker
     pointer:
       sourceName: "shiphitchcock1/betaci_nod_limitless_pl"
     seed:
