@@ -20,17 +20,17 @@ resources:
       
   - name: gke-cluster
     type: cluster
-    integration: sreyaj-gke
+    integration: sreyaj-gce
     pointer:
       sourceName: "small-cluster" #name of the cluster we are deploying.
       region: "us-east1-d"
       
-  #- name: tripub-cluster3
-   # type: cluster
-  #  integration: varshaarun-tripub
-   # pointer:
-    #  sourceName: "default" # we can give anything it deploy instances based on region not by cluster name
-    #  region: "us-east-2"
+  - name: tripub-cluster3
+    type: cluster
+    integration: sreyaj-triton
+    pointer:
+      sourceName: "default" # we can give anything it deploy instances based on region not by cluster name
+      region: "us-east-2"
 
   - name: plv2-image1
     type: image
