@@ -24,20 +24,6 @@ resources:
     pointer:
       sourceName: "small-cluster" #name of the cluster we are deploying.
       region: "us-east1-d"
-
-  - name: tripub-cluster1
-    type: cluster
-    integration: varshaarun-tripub
-    pointer:
-      sourceName: "default" # we can give anything it deploy instances based on region not by cluster name
-      region: "us-east-1"
-      
-  - name: tripub-cluster2
-    type: cluster
-    integration: varshaarun-tripub
-    pointer:
-      sourceName: "default" # we can give anything it deploy instances based on region not by cluster name
-      region: "us-east-3"
       
   - name: tripub-cluster3
     type: cluster
@@ -61,61 +47,6 @@ resources:
       sourceName: "shiphitchcock1/betaci_nod_limitless_pl"
     seed:
       versionName: "deploy.5"
-      
-  - name: plv2-image3
-    type: image
-    integration: cock1-hub
-    pointer:
-      sourceName: "scriptnull/busybox"
-    seed:
-      versionName: "nodeenv"
-      
-  - name: plv2-imgdoesntexist
-    type: image
-    integration: cock1-hub
-    pointer:
-      sourceName: "shiphitchcock1/busybox"
-    seed:
-      versionName: "node"
-      
-  - name: plv2-imgtagdoestexists
-    type: image
-    integration: cock1-hub
-    pointer:
-      sourceName: "shiphitchcock1/betaci_nod_limitless_pl"
-    seed:
-      versionName: "test"
-      
-  - name: plv2-imagewithopts
-    type: image
-    integration: cock1-hub
-    pointer:
-      sourceName: "scriptnull/debian"
-    seed:
-      versionName: "driftking"
-      
-  - name: plv2-image4
-    type: image
-    integration: cock1-hub
-    pointer:
-      sourceName: "shiphitchcock1/betaci_nod_limitless_pl"
-    seed:
-      versionName: "deploy.5"
-
-  - name: plv2tp-dopts7
-    type: dockerOptions
-    version:
-      memory: 128
-      user: "driftking"
-      workingDir: "/makemeworking"
-      publishAllPorts: true
-      cmd:
-        - "node"
-        - "job.js"
-      dnsServers:
-        - "127.0.8.1"
-      dnsSearch:
-        - "127.8.0.1"
 
   - name: plv2-dopts1
     type: dockerOptions
@@ -124,46 +55,8 @@ resources:
       cpuShares: 8
       portMappings:
         - "80:80"
-        
-  - name: plv2-opts2
-    type: dockerOptions
-    version:
-      memory: 200
-      cpuShares: 16
       
-  - name: plv2-invaliddopts3
-    type: dockerOptions
-    version:
-      memory: 200
-      cpuShares: 16
-      #links:
-       # - "sampletest-ecsdeploy2cef72c3-9d76-410b-861d-c2a8d4cb2886"
-       
-  - name: plv2gke-dopts4
-    type: dockerOptions
-    version:
-      memory: 64
-      cpuShares: 2
-      entryPoint:
-        - "mongod"
-      workingDir: "/home/test"
-      cmd:
-        - "pwd"
-        - "true"
-      privileged: false
-      user: shiptest@shippable.com
-      volumes:
-        - "/host/path.2:/container/path:rw"
-        - "/host/path:/container/path2:rw"
-        - "/host/path2:/container/path3:ro"
-       # - "/host/path..2:/container/path4:rw"
-        #- "/host/path..3:/container/path5:ro"
-        - "/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz:/container/path6:ro"
-      labels:
-        labelone: valueOne
-        labeltwo: valueTwo
-      
-  - name: plv2-tpdopts
+  - name: plv2-tpdopts2
     type: dockerOptions
     version:
       memory: 128
@@ -174,109 +67,17 @@ resources:
       publishAllPorts : true
       #publishAllPorts assigns a public ip to the container and gives endpoint
       #for accessing the exposed ports.
-      
-  - name: plv2ecs-dopts5
-    type: dockerOptions
-    version:
-      memory: 100
-      cpuShares: 0
-      links:
-        - "plv2upgrade-ecsdeploy81de65e0-beec-4cd6-969f-0529e7858392"
-      
-  - name: plv2-tpdopts1
-    type: dockerOptions
-    version:
-      memory: 200
-      #Triton has standard values for memory 128,512 etc.
-      #If non standard values is given in the memory, it chooses the closest
-      #standard memory value. Triton also uses this value to choose the plan
-      #and cpu-shares
-      publishAllPorts : false
-      
-  - name: plv2ecs-OtherDOpts
-    type: dockerOptions
-    #integration: varshaarun-ecs
-    version:
-      memory: 48
-      cpuShares: 2
-      #links:
-       # - "sampletest-ecsdeploy2cef72c3-9d76-410b-861d-c2a8d4cb2886"
-      cmd:
-        - "pwd"
-        #- "true"
-      entryPoint:
-        - "mongod"
-      workingDir: "/home/test"
-      privileged: false
-      user: testuser
-      volumes:
-        - "/host/path.2:/container/path:rw"
-        - "/host/path:/container/path2:rw"
-        - "/host/path2:/container/path3:ro"
-       # - "/host/path..2:/container/path4:rw"
-        - "/host/path..3:/container/path5:ro"
-        - "/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz:/container/path6:ro"
-      #volumesFrom:
-       # - "sampletest-ecsdeploy2cef72c3-9d76-410b-861d-c2a8d4cb2886:ro"
-      dnsServers:
-        - "127.0.0.1"
-        #- "8.8.8.8"
-      dnsSearch:
-        - "127.0.0.1"
-        #- "8.8.8.8"
-      logConfig:
-        type: "json-file"
-        options:
-          test: test
-      ulimits:
-        - name: cpu
-          hard: 5
-          soft: 3
-        - name: core
-          hard: 10
-          soft: 5
-      labels:
-        labelone: valueOne
-        labeltwo: valueTwo
-      portMappings:
-        - "80:80"
-        
-  - name: plv2ecs-dopts6
-    type: dockerOptions
-    version:
-      workingDir: "/home/test"
-
+  
   - name: plv2-params1
     type: params
     version:
       params:
         MONGO_API_URL: "localhost:28017"
-
-  - name: plv2-params2
-    type: params
-    version:
-      params:
-        DB_HOST: "ds015700.mlab.com"
-        DB_NAME: "ayeaye"
-        DB_PORT: "15700"
-        DB_USERNAME: "aye0aye"
-        DB_PASSWORD: "aye0aye"
-        ENVIRONMENT: "test-aws"
-
-  - name: plv2-scale1
-    type: replicas
-    version:
-      count: 1
       
   - name: plv2-scale2
     type: replicas
     version:
       count: 2
-
-  - name: plv2-scale3
-    type: replicas
-    version:
-      count: 3
   
   - name: plv2-version
     type: version
