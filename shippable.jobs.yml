@@ -50,6 +50,6 @@ jobs:
   - name: plv2-tripubdeploy1
     type: tripubDeploy
     steps:
-      - IN: plv2-manifest2
+      - IN: plv2-man1
       - IN: tripub-cluster3
       
