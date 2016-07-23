@@ -1,5 +1,5 @@
 jobs:
-  - name: plv2-man1
+  - name: plv2-man2
     type: manifest
     steps:
       - IN: plv2-image1
@@ -9,7 +9,7 @@ jobs:
     #on_failure:
      # - echo 'this is on_failure step of dv-man of type manifest'
   
-  - name: release-version1
+  - name: release-version2
     type: release
     steps:
       - IN: plv2-version
@@ -18,20 +18,20 @@ jobs:
       - TASK: managed
         bump: major
         
-  - name: plv2-ddcdeploy
+  - name: plv2-ddcdeploy1
     type: ddcDeploy
     steps:
       - IN: plv2-man1
       - IN: ddc-cluster
       
-  - name: b-mon-dcl
+  - name: b-mon-dcl1
     type: dclDeploy
     steps:
       - IN: plv2-man1
       - IN: cluster-dcl
       - TASK: managed
 
-  - name: plv2-ecsdeploy
+  - name: plv2-ecsdeploy1
     type: ecsDeploy
     steps:
       - IN: plv2-man1
@@ -39,7 +39,7 @@ jobs:
       - TASK: managed
         deployMethod: upgrade
 
-  - name: plv2-gkedeploy
+  - name: plv2-gkedeploy1
     type: gkeDeploy
     steps:
       - IN: plv2-man1
@@ -47,7 +47,7 @@ jobs:
       - TASK: managed
         deployMethod: upgrade
 
-  - name: plv2-tripubdeploy1
+  - name: plv2-tripubdeploy2
     type: tripubDeploy
     steps:
       - IN: plv2-man1
