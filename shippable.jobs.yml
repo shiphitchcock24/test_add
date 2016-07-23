@@ -28,7 +28,7 @@ jobs:
     type: dclDeploy
     steps:
       - IN: plv2-man1
-      - IN: dcl-cluster
+      - IN: cluster-dcl
       - TASK: managed
 
   - name: plv2-ecsdeploy
