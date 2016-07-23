@@ -13,7 +13,7 @@ jobs:
     type: release
     steps:
       - IN: plv2-version
-      - IN: plv2-man1
+      - IN: plv2-man2
       - IN: triggerv2sp2
       - TASK: managed
         bump: major
@@ -21,20 +21,20 @@ jobs:
   - name: plv2-ddcdeploy1
     type: ddcDeploy
     steps:
-      - IN: plv2-man1
+      - IN: plv2-man2
       - IN: ddc-cluster
       
   - name: b-mon-dcl1
     type: dclDeploy
     steps:
-      - IN: plv2-man1
+      - IN: plv2-man2
       - IN: cluster-dcl
       - TASK: managed
 
   - name: plv2-ecsdeploy1
     type: ecsDeploy
     steps:
-      - IN: plv2-man1
+      - IN: plv2-man2
       - IN: ecs-cluster
       - TASK: managed
         deployMethod: upgrade
@@ -42,7 +42,7 @@ jobs:
   - name: plv2-gkedeploy1
     type: gkeDeploy
     steps:
-      - IN: plv2-man1
+      - IN: plv2-man2
       - IN: gke-cluster
       - TASK: managed
         deployMethod: upgrade
@@ -50,6 +50,6 @@ jobs:
   - name: plv2-tripubdeploy2
     type: tripubDeploy
     steps:
-      - IN: plv2-man1
+      - IN: plv2-man2
       - IN: tripub-cluster3
       
