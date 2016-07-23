@@ -1,120 +1,29 @@
 jobs:
-  - name: plv2multiimg-mf1
+  - name: plv2-man1
     type: manifest
     steps:
       - IN: plv2-image1
-        pull: false
-      - IN: plv2-image2
-      - IN: plv2-image3
-      - IN: plv2-tpdopts
-      - IN: plv2-params1
-        applyTo:
-          - plv2-image3
-      - TASK: managed
       - IN: triggerv2sp1
     #on_success:
      # - echo 'this is on_success step of dv-man of type manifest'
     #on_failure:
      # - echo 'this is on_failure step of dv-man of type manifest'
-     
-  - name: plv2-manifest2
-    type: manifest
-    steps:
-      - IN: plv2-image1
-      - TASK: managed
-      - IN: triggerv2sp2
-      - IN: plv2-params2
-      - IN: plv2-dopts1
-      - IN: plv2-scale1
-      
-  - name: plv2-mftomf3
-    type: manifest
-    steps:
-      - IN: plv2-image2
-      - IN: plv2-manifest2
-      - TASK: managed
-      
-  - name: plv2-manifest4
-    type: manifest
-    steps:
-      - IN: plv2-image2
-      - IN: plv2-tpdopts
-      - IN: triggerv2sp4
-      - TASK: managed
-      
-  - name: plv2-manifest5
-    type: manifest
-    steps:
-      - IN: plv2-image2
-      - IN: triggerv2sp5
-      - IN: plv2ecs-OtherDOpts
-      - TASK: managed
-      
-  - name: plv2upgrade-manifest6
-    type: manifest
-    steps:
-      - IN: plv2-image2
-      - IN: triggerv2sp6
-      #- IN: plv2ecs-dopts5
-      - TASK: managed
-      
-  - name: plv2gke-manifest7
-    type: manifest
-    steps:
-      - IN: plv2-image2
-      - IN: triggerv2sp7
-      - IN: plv2gke-dopts4
-      - TASK: managed
-      
-  - name: plv2ecs-manifest8
-    type: manifest
-    steps:
-      - IN: plv2-image2
-      - IN: triggerv2sp8
-      - IN: plv2ecs-dopts6
-      - TASK: managed
-      
-  - name: plv2tri-manifest9
-    type: manifest
-    steps:
-      - IN: plv2-imagewithopts
-      - IN: triggerv2sp9
-      - IN: plv2tp-dopts7
-      - TASK: managed
-      
-  - name: plv2-manifest10
-    type: manifest
-    steps:
-      - IN: plv2-imgdoesntexist
-      #- IN: triggerv2sp9
-      #- IN: plv2tp-dopts7
-      - TASK: managed
-      
-  - name: plv2-manifest11
-    type: manifest
-    steps:
-      - IN: plv2-imgtagdoestexists
-      #- IN: triggerv2sp9
-      #- IN: plv2tp-dopts7
-      - TASK: managed
-      
+  
   - name: release-version1
     type: release
     steps:
       - IN: plv2-version
-      - IN: plv2-manifest1
+      - IN: plv2-man1
       - IN: triggerv2sp2
       - TASK: managed
-        bump: minor
+        bump: major
         
   - name: plv2-ddcdeploy
     type: ddcDeploy
     steps:
-      - IN: plv2-manifest2
+      - IN: plv2-man1
       - IN: ddc-cluster
-      - IN: plv2-opts2
-      - TASK: managed
-
+      
  # - name: b-mon-dcl
   #  type: dclDeploy
    # steps:
@@ -125,7 +34,7 @@ jobs:
   - name: plv2-ecsdeploy
     type: ecsDeploy
     steps:
-      - IN: plv2-manifest2
+      - IN: plv2-man1
       - IN: ecs-cluster
       - TASK: managed
         deployMethod: upgrade
@@ -133,7 +42,7 @@ jobs:
   - name: plv2-gkedeploy
     type: gkeDeploy
     steps:
-      - IN: plv2gke-manifest7
+      - IN: plv2-man1
       - IN: gke-cluster
       - TASK: managed
         deployMethod: upgrade
@@ -142,60 +51,5 @@ jobs:
     type: tripubDeploy
     steps:
       - IN: plv2-manifest2
-      - IN: tripub-cluster1
-      - IN: plv2-tpdopts1
-      - TASK: managed
-        deployMethod: upgrade
-        
-  - name: plv2-tripubdeploy9
-    type: tripubDeploy
-    steps:
-      - IN: plv2tri-manifest9
       - IN: tripub-cluster3
-      - TASK: managed
-       # deployMethod: blueGreen
-
-  - name: plv2multimf-tripubdeploy2
-    type: tripubDeploy
-    steps:
-      - IN: plv2-manifest2
-      - IN: plv2-manifest4
-      - IN: tripub-cluster2
-      - IN: plv2-tpdopts
-      - TASK: managed
-        deployMethod: blueGreen
-        
-  - name: plv2mftomf-tripubdeploy2
-    type: tripubDeploy
-    steps:
-      - IN: plv2-mftomf3
-      - IN: tripub-cluster2
-      - IN: plv2-tpdopts1
-      - TASK: managed
-        deployMethod: blueGreen
-        
-  - name: plv2-ecsdeploy2
-    type: ecsDeploy
-    steps:
-      - IN: ecs-cluster
-      - IN: plv2-manifest5
-      - TASK: managed
-        deployMethod: upgrade
-
-  - name: plv2upgrade-ecsdeploy
-    type: ecsDeploy
-    steps:
-      - IN: ecs-cluster
-      - IN: plv2-invaliddopts3
-      - IN: plv2upgrade-manifest6
-      - TASK: managed
-        deployMethod: upgrade
-        
-  - name: plv2ecs-ecsdeploy7
-    type: ecsDeploy
-    steps:
-      - IN: ecs-cluster
-      - IN: plv2ecs-manifest8
-      - TASK: managed
-        deployMethod: upgrade
-
+      
