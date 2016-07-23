@@ -24,12 +24,12 @@ jobs:
       - IN: plv2-man1
       - IN: ddc-cluster
       
- # - name: b-mon-dcl
-  #  type: dclDeploy
-   # steps:
-    #  - IN: plv2-manifest2
-     # - IN: dcl-cluster
-      #- TASK: managed
+  - name: b-mon-dcl
+    type: dclDeploy
+    steps:
+      - IN: plv2-man1
+      - IN: dcl-cluster
+      - TASK: managed
 
   - name: plv2-ecsdeploy
     type: ecsDeploy
