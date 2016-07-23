@@ -5,11 +5,11 @@ resources:
     pointer:
       sourceName : "nothing" #we can anything because it is mandatory but ddc doesnot have clusters
 
-  #- name: cluster-dcl
-   # type: cluster
-    #integration: scriptnull-dcl
-    #pointer:
-     #sourceName : "cluster-dcl"
+  - name: cluster-dcl
+    type: cluster
+    integration: ship4-dcl
+    pointer:
+     sourceName : "cluster-dcl"
 
   - name: ecs-cluster
     type: cluster
