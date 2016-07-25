@@ -44,8 +44,8 @@ resources:
     type: notification
     integration: email
     pointer:
-    recipients: 
-      -  "sreya@shippable.com"
+      recipients: 
+        -  "sreya@shippable.com"
       
 ##  - name: plv2-image2
   ##  type: image
