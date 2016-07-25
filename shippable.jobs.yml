@@ -2,7 +2,7 @@ jobs:
   - name: plv2-man2
     type: manifest
     steps:
-      - IN: plv2-image12
+      - IN: plv21
       - IN: triggerv2sp1
     #on_success:
      # - echo 'this is on_success step of dv-man of type manifest'
