@@ -40,6 +40,14 @@ resources:
     seed:
       versionName: "deploy.4"
       
+  - name: plv21
+    type: image
+    integration: ship4-docker
+    pointer:
+      sourceName: "library/nginx"
+    seed:
+      versionName: "latest"
+      
   - name: myEmail
     type: notification
     integration: email
