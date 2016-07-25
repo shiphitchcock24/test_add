@@ -32,7 +32,7 @@ resources:
      # sourceName: "default" # we can give anything it deploy instances based on region not by cluster name
     #  region: "us-east-2"
 
-  - name: plv2-image1
+  - name: plv2-image12
     type: image
     integration: ship4-docker
     pointer:
