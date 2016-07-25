@@ -15,7 +15,7 @@ resources:
     type: cluster
     integration: ship-awsnew
     pointer:
-      sourceName : "default"
+      sourceName : "defaultsreya"
       region: "us-west-2"
       
   #- name: gke-cluster
