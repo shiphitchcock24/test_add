@@ -54,7 +54,7 @@ jobs:
 
  # - name: plv2-tripubdeploy2
   #  type: tripubDeploy
-   # steps:
+   # steps: 
     #  - IN: plv2-man2
      # - IN: tripub-cluster3
       
