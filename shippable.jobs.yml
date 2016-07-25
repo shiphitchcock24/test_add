@@ -38,6 +38,11 @@ jobs:
       - IN: ecs-cluster
       - TASK: managed
         deployMethod: upgrade
+    on_success:
+      - NOTIFY: myEmail
+    on_failure:
+      - NOTIFY: myEmail
+
 
 #  - name: plv2-gkedeploy1
  #   type: gkeDeploy
