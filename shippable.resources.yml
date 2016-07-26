@@ -99,9 +99,9 @@ resources:
     seed:
       versionName: "1.1.1-beta"
 
-  - name: infra-repo
-    type: gitRepo
-    integration: github
-    pointer:
-      sourceName: shippableSamples/infra-repo
-      branch: master
+#  - name: infra-repo
+ #   type: gitRepo
+  #  integration: github
+  #  pointer:
+   #   sourceName: shippableSamples/infra-repo
+    #  branch: master
