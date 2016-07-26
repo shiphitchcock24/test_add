@@ -63,23 +63,23 @@ resources:
     seed:
       versionName: "deploy.5"
 
-  - name: plv2-dopts1
-    type: dockerOptions
-    version:
-      memory: 64
-    cpuShares: 8
-    portMappings:
-        - "80:80"
+  #- name: plv2-dopts1
+    #type: dockerOptions
+    #version:
+     # memory: 64
+    #cpuShares: 8
+    #portMappings:
+      #  - "80:80"
       
-  - name: plv2-tpdopts2
-    type: dockerOptions
-    version:
-      memory: 128
+#  - name: plv2-tpdopts2
+ #   type: dockerOptions
+  #  version:
+   #   memory: 128
       #Triton has standard values for memory 128,512 etc.
       #If non standard values is given in the memory, it chooses the closest
       #standard memory value. Triton also uses this value to choose the plan
       #and cpu-shares
-      publishAllPorts : true
+    #  publishAllPorts : true
       #publishAllPorts assigns a public ip to the container and gives endpoint
       #for accessing the exposed ports.
   
