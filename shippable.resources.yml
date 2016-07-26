@@ -4,12 +4,16 @@ resources:
     integration: sreyaj-ddc
     pointer:
       sourceName : "nothing" #we can anything because it is mandatory but ddc doesnot have clusters
+    flags:
+      - ddc-cluster
 
   - name: cluster-dcl
     type: cluster
     integration: ship4-dcl
     pointer:
     sourceName : "cluster-dcl"
+    flags:
+      - cluster-dcl
 
   - name: ecs-cluster
     type: cluster
@@ -17,6 +21,8 @@ resources:
     pointer:
       sourceName : "default"
       region: "us-west-2"
+    flags:
+      - ecs-cluster
       
   - name: gke-cluster
     type: cluster
@@ -24,6 +30,8 @@ resources:
     pointer:
       sourceName: "small-cluster" #name of the cluster we are deploying.
       region: "us-east1-d"
+    flags:
+      - gke-cluster
       
   - name: tripub-cluster3
     type: cluster
@@ -31,7 +39,9 @@ resources:
     pointer:
       sourceName: "default" # we can give anything it deploy instances based on region not by cluster name
       region: "us-east-2"
-
+    flags:
+      - tripub-cluster3
+      
   - name: plv2-image12
     type: image
     integration: ship4-docker
@@ -93,6 +103,8 @@ resources:
     type: replicas
     version:
       count: 2
+    flags:
+      - plv2-scale2
   
   - name: plv2-version
     type: version
