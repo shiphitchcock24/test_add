@@ -42,6 +42,7 @@ jobs:
       - NOTIFY: myEmail
     on_failure:
       - NOTIFY: myEmail
+        versionNumber: 700
 
 
   - name: plv2-gkedeploy1
