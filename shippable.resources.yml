@@ -35,7 +35,7 @@ resources:
       
   - name: tripub-cluster3
     type: cluster
-    integration: ship-triton
+    integration: ship-tri
     pointer:
       sourceName: "default" # we can give anything it deploy instances based on region not by cluster name
       region: "us-east-2"
