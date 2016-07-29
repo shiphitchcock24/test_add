@@ -4,7 +4,7 @@ jobs:
     steps:
       - IN: plv2-image12
       - IN: triggerv2sp1
-      - IN: varsha
+    #  - IN: varsha
     #on_success:
      # - echo 'this is on_success step of dv-man of type manifest'
     #on_failure:
