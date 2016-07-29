@@ -19,20 +19,20 @@ jobs:
         bump: major
         
   - name: plv2-ddcdeploy1
-    type: ddcDeploy
+    type: deploy
     steps:
       - IN: plv2-man2
       - IN: ddc-cluster
       
   - name: b-mon-dcl1
-    type: dclDeploy
+    type: deploy
     steps:
       - IN: plv2-man2
       - IN: cluster-dcl
       - TASK: managed
 
   - name: plv2-ecsdeploy1
-    type: ecsDeploy
+    type: deploy
     steps:
       - IN: plv2-man2
       - IN: ecs-cluster
@@ -46,7 +46,7 @@ jobs:
 
 
   - name: plv2-gkedeploy1
-    type: gkeDeploy
+    type: deploy
     steps:
       - IN: plv2-man2
       - IN: gke-cluster
@@ -54,7 +54,7 @@ jobs:
         deployMethod: upgrade
 
   - name: plv2-tripubdeploy2
-    type: tripubDeploy
+    type: deploy
     steps: 
       - IN: plv2-man2
       - IN: tripub-cluster3
