@@ -1,7 +1,7 @@
 resources:
   - name: ddc-cluster
     type: cluster
-    integration: sreyaj-ddc
+    integration: ship-ddc
     pointer:
       sourceName : "nothing" #we can anything because it is mandatory but ddc doesnot have clusters
     flags:
@@ -9,7 +9,7 @@ resources:
 
   - name: cluster-dcl
     type: cluster
-    integration: ship4-dcl
+    integration: ship-dcl
     pointer:
     sourceName : "cluster-dcl"
     flags:
@@ -26,7 +26,7 @@ resources:
       
   - name: gke-cluster
     type: cluster
-    integration: sreyaj-gce
+    integration: ship-gke
     pointer:
       sourceName: "small-cluster" #name of the cluster we are deploying.
       region: "us-east1-d"
@@ -35,7 +35,7 @@ resources:
       
   - name: tripub-cluster3
     type: cluster
-    integration: sreyaj-triton
+    integration: ship-triton
     pointer:
       sourceName: "default" # we can give anything it deploy instances based on region not by cluster name
       region: "us-east-2"
