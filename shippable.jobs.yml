@@ -24,7 +24,7 @@ jobs:
       - IN: plv2-man2
       - IN: ddc-cluster
       
-  - name: b-mon-dcl1
+  - name: b-mon-dcl2
     type: deploy
     steps:
       - IN: plv2-man2
