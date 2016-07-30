@@ -49,14 +49,15 @@ jobs:
         #versionNumber: 700
 
 
-  #- name: plv2-gkedeploy3
-    #type: deploy
-    #steps:
-      #- IN: plv2-man3
-      #- IN: gke-cluster
-      #- IN: plv2-dopts1
-      #- TASK: managed
-      #  deployMethod: upgrade
+  - name: plv2-gkedeploy4
+    type: deploy
+    steps:
+      - IN: plv2-man3
+      - IN: gke-cluster
+      - IN: plv2-scale2
+     # - IN: plv2-dopts1
+      - TASK: managed
+        deployMethod: upgrade
 
  # - name: plv2-tripubdeploy3
   #  type: deploy
