@@ -11,57 +11,57 @@ jobs:
     #on_failure:
      # - echo 'this is on_failure step of dv-man of type manifest'
   
-  - name: release-version3
-    type: release
-    steps:
-      - IN: plv2-version
-      - IN: plv2-man3
+  #- name: release-version3
+   # type: release
+   # steps:
+    #  - IN: plv2-version
+     # - IN: plv2-man3
      # - IN: triggerv2sp2
-      - TASK: managed
-        bump: major
+     # - TASK: managed
+      #  bump: major
         
-  - name: plv2-ddcdeploy3
-    type: deploy
-    steps:
-      - IN: plv2-man3
-      - IN: ddc-cluster
-      - IN: plv2-scale2
+  #- name: plv2-ddcdeploy3
+   # type: deploy
+   # steps:
+    #  - IN: plv2-man3
+     # - IN: ddc-cluster
+      #- IN: plv2-scale2
       
-  - name: b-mon-dcl3
-    type: deploy
-    steps:
-      - IN: plv2-man3
-      - IN: cluster-dcl
-      - TASK: managed
+  #- name: b-mon-dcl3
+    #type: deploy
+    #steps:
+     # - IN: plv2-man3   
+     # - IN: cluster-dcl
+     # - TASK: managed
 
-  - name: plv2-ecsdeploy3
-    type: deploy
-    steps:
-      - IN: plv2-man3
-      - IN: ecs-cluster
-      - IN: glab-kickstart
-      - TASK: managed
-        deployMethod: upgrade
-    on_success:
-      - NOTIFY: myEmail
-    on_failure:
-      - NOTIFY: myEmail
+  #- name: plv2-ecsdeploy3
+   # type: deploy
+   # steps:
+     # - IN: plv2-man3
+     # - IN: ecs-cluster
+     # - IN: glab-kickstart
+     # - TASK: managed
+    #    deployMethod: upgrade
+   # on_success:
+     # - NOTIFY: myEmail
+    #on_failure:
+     # - NOTIFY: myEmail
         #versionNumber: 700
 
 
-  - name: plv2-gkedeploy3
-    type: deploy
-    steps:
-      - IN: plv2-man3
-      - IN: gke-cluster
-      - IN: plv2-dopts1
-      - TASK: managed
-        deployMethod: upgrade
+  #- name: plv2-gkedeploy3
+    #type: deploy
+    #steps:
+      #- IN: plv2-man3
+      #- IN: gke-cluster
+      #- IN: plv2-dopts1
+      #- TASK: managed
+      #  deployMethod: upgrade
 
-  - name: plv2-tripubdeploy3
-    type: deploy
-    steps: 
-      - IN: plv2-man3
-      - IN: plv2-params1
-      - IN: tripub-cluster3
+ # - name: plv2-tripubdeploy3
+  #  type: deploy
+  #  steps: 
+   #   - IN: plv2-man3
+    #  - IN: plv2-params1
+     # - IN: tripub-cluster3
       
