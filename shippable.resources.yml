@@ -120,5 +120,5 @@ resources:
     type: gitRepo
     integration: github
     pointer:
-      sourceName: shiphitchcock24/sampleRub
+      sourceName: github/sampleRub
       branch: master
