@@ -116,9 +116,9 @@ resources:
     version: 
       count: 1
 
-  - name: infra-repo
-    type: gitRepo
-    integration: github
-    pointer:
-      sourceName: shiphitchcock24/sampleRub
-      branch: master
+ # - name: infra-repo
+  #  type: gitRepo
+  #  integration: github
+   # pointer:
+  #    sourceName: shiphitchcock24/sampleRub
+   #   branch: master
