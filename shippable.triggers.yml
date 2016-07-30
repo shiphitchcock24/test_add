@@ -2,7 +2,7 @@ triggers:
    - name: triggerv2sp1
      type: trigger
      version:
-       counter: 665
+       counter: 666
        
    - name: triggerv2sp2
      type: trigger
