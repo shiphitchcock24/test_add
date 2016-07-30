@@ -114,7 +114,7 @@ resources:
   - name: glab-kickstart
     type: kickStart
     version: 
-      count: 1
+      counter: 1
 
  # - name: infra-repo
   #  type: gitRepo
