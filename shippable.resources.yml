@@ -73,13 +73,13 @@ resources:
     seed:
       versionName: "deploy.5"
 
-  #- name: plv2-dopts1
-    #type: dockerOptions
-    #version:
-     # memory: 64
-    #cpuShares: 8
-    #portMappings:
-      #  - "80:80"
+  - name: plv2-dopts1
+    type: dockerOptions
+    version:
+      memory: 64
+      cpuShares: 8
+      portMappings:
+        - "80:80"
       
 #  - name: plv2-tpdopts2
  #   type: dockerOptions
@@ -93,11 +93,11 @@ resources:
       #publishAllPorts assigns a public ip to the container and gives endpoint
       #for accessing the exposed ports.
   
- # - name: plv2-params1
-  #  type: params
-  #  version:
-   #   params:
-    #    MONGO_API_URL: "localhost:28017"
+  - name: plv2-params1
+    type: params
+    version:
+      params:
+        MONGO_API_URL: "localhost:28017"
       
   - name: plv2-scale2
     type: replicas
@@ -110,10 +110,15 @@ resources:
     type: version
     seed:
       versionName: "1.1.1-beta"
+      
+  - name: glab-kickstart
+    type: kickStart
+    version: 
+      count: 1
 
-#  - name: infra-repo
- #   type: gitRepo
-  #  integration: github
-  #  pointer:
-   #   sourceName: shippableSamples/infra-repo
-    #  branch: master
+  - name: infra-repo
+    type: gitRepo
+    integration: github
+    pointer:
+      sourceName: shiphitchcock4/sampleRub
+      branch: master
