@@ -1,8 +1,9 @@
 jobs:
-  - name: plv2-man2
+  - name: plv2-man3
     type: manifest
     steps:
       - IN: plv2-image12
+      - IN: infra-repo
       - IN: triggerv2sp1
     #  - IN: varsha
     #on_success:
@@ -10,53 +11,57 @@ jobs:
     #on_failure:
      # - echo 'this is on_failure step of dv-man of type manifest'
   
-  - name: release-version2
+  - name: release-version3
     type: release
     steps:
       - IN: plv2-version
-      - IN: plv2-man2
-      - IN: triggerv2sp2
+      - IN: plv2-man3
+     # - IN: triggerv2sp2
       - TASK: managed
         bump: major
         
-  - name: plv2-ddcdeploy1
+  - name: plv2-ddcdeploy3
     type: deploy
     steps:
-      - IN: plv2-man2
+      - IN: plv2-man3
       - IN: ddc-cluster
+      - IN: plv2-scale2
       
-  - name: b-mon-dcl2
+  - name: b-mon-dcl3
     type: deploy
     steps:
-      - IN: plv2-man2
+      - IN: plv2-man3
       - IN: cluster-dcl
       - TASK: managed
 
-  - name: plv2-ecsdeploy1
+  - name: plv2-ecsdeploy3
     type: deploy
     steps:
-      - IN: plv2-man2
+      - IN: plv2-man3
       - IN: ecs-cluster
+      - IN: glab-kickstart
       - TASK: managed
         deployMethod: upgrade
     on_success:
       - NOTIFY: myEmail
     on_failure:
       - NOTIFY: myEmail
-        versionNumber: 700
+        #versionNumber: 700
 
 
-  - name: plv2-gkedeploy1
+  - name: plv2-gkedeploy3
     type: deploy
     steps:
-      - IN: plv2-man2
+      - IN: plv2-man3
       - IN: gke-cluster
+      - IN: plv2-dopts1
       - TASK: managed
         deployMethod: upgrade
 
-  - name: plv2-tripubdeploy2
+  - name: plv2-tripubdeploy3
     type: deploy
     steps: 
-      - IN: plv2-man2
+      - IN: plv2-man3
+      - IN: plv2-params1
       - IN: tripub-cluster3
       
