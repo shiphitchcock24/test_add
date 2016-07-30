@@ -3,7 +3,7 @@ jobs:
     type: manifest
     steps:
       - IN: plv2-image12
-      - IN: infra-repo
+     # - IN: infra-repo
       - IN: triggerv2sp1
     #  - IN: varsha
     #on_success:
