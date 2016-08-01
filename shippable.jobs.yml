@@ -11,7 +11,7 @@ jobs:
     #on_failure:
      # - echo 'this is on_failure step of dv-man of type manifest'
   
-  - name: release-version3
+  - name: release-version6
     type: release
     steps:
       - IN: plv2-version
@@ -20,21 +20,21 @@ jobs:
       - TASK: managed
         bump: major
           
-  - name: plv2-ddcdeploy4
+  - name: plv2-ddcdeploy6
     type: deploy
     steps:
       - IN: plv2-man3
       - IN: ddc-cluster
       - IN: plv2-scale2
       
-  - name: b-mon-dcl3
+  - name: b-mon-dcl6
     type: deploy
     steps:
       - IN: plv2-man3   
       - IN: cluster-dcl
       - TASK: managed
 
-  - name: plv2-ecsdeploy3
+  - name: plv2-ecsdeploy6
     type: deploy
     steps:
       - IN: plv2-man3
@@ -49,7 +49,7 @@ jobs:
         #versionNumber: 700
 
 
-  - name: plv2-gkedeploy5
+  - name: plv2-gkedeploy6
     type: deploy
     steps:
       - IN: plv2-man3
@@ -60,7 +60,7 @@ jobs:
       - TASK: managed
         deployMethod: upgrade
 
-  - name: plv2-tripubdeploy4
+  - name: plv2-tripubdeploy6
     type: deploy
     steps: 
       - IN: plv2-man3
