@@ -46,9 +46,9 @@ resources:
     type: image
     integration: ship4-docker
     pointer:
-      sourceName: "shiphitchcock1/betaci_nod_limitless_pl"
+      sourceName: "shiphitchcock1/pipelinev2"
     seed:
-      versionName: "deploy.4"
+      versionName: "deploy.1"
       
   - name: plv21
     type: image
