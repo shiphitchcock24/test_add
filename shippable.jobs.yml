@@ -11,54 +11,54 @@ jobs:
     #on_failure:
      # - echo 'this is on_failure step of dv-man of type manifest'
   
-  - name: release-version6
-    type: release
-    steps:
-      - IN: plv2-version
-      - IN: plv2-man3
-      - IN: triggerv2sp2
-      - TASK: managed
-        bump: major
+ # - name: release-version6
+  #  type: release
+   # steps:
+    #  - IN: plv2-version
+     # - IN: plv2-man3
+      #- IN: triggerv2sp2
+      #- TASK: managed
+       # bump: major
           
-  - name: plv2-ddcdeploy6
-    type: deploy
-    steps:
-      - IN: plv2-man3
-      - IN: ddc-cluster
-      - IN: plv2-scale2
+  #- name: plv2-ddcdeploy6
+   # type: deploy
+  #  steps:
+   #   - IN: plv2-man3
+    #  - IN: ddc-cluster
+     # - IN: plv2-scale2
       
-  - name: b-mon-dcl6
-    type: deploy
-    steps:
-      - IN: plv2-man3   
-      - IN: cluster-dcl
-      - TASK: managed
+  #- name: b-mon-dcl6
+   # type: deploy
+    #steps:
+     # - IN: plv2-man3   
+      #- IN: cluster-dcl
+      #- TASK: managed
 
-  - name: plv2-ecsdeploy6
-    type: deploy
-    steps:
-      - IN: plv2-man3
-      - IN: ecs-cluster
-      - IN: glab-kickstart
-      - TASK: managed
-        deployMethod: upgrade
-    on_success:
-      - NOTIFY: myEmail
-    on_failure:
-      - NOTIFY: myEmail
+  #- name: plv2-ecsdeploy6
+   # type: deploy
+    #steps:
+      #- IN: plv2-man3
+      #- IN: ecs-cluster
+      #- IN: glab-kickstart
+      #- TASK: managed
+        #deployMethod: upgrade
+    #on_success:
+     # - NOTIFY: myEmail
+    #on_failure:
+     # - NOTIFY: myEmail
         #versionNumber: 700
 
 
-  - name: plv2-gkedeploy6
-    type: deploy
-    steps:
-      - IN: plv2-man3
-      - IN: gke-cluster
+  #- name: plv2-gkedeploy6
+   # type: deploy
+  #  steps:
+   #   - IN: plv2-man3
+    #  - IN: gke-cluster
      # - IN: glab-kickstart
       #- IN: plv2-scale2
-      - IN: plv2-dopts1
-      - TASK: managed
-        deployMethod: upgrade
+     # - IN: plv2-dopts1
+      #- TASK: managed
+      #  deployMethod: upgrade
 
   - name: plv2-tripubdeploy6
     type: deploy
