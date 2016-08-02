@@ -27,12 +27,12 @@ jobs:
      # - IN: ddc-cluster
      # - IN: plv2-scale2
       
-  #- name: b-mon-dcl6
-   # type: deploy
-    #steps:
-     # - IN: plv2-man3   
-      #- IN: cluster-dcl
-      #- TASK: managed
+  - name: b-mon-dcl6
+    type: deploy
+    steps:
+      - IN: plv2-man4   
+      - IN: cluster-dcl
+      - TASK: managed
 
   #- name: plv2-ecsdeploy6
    # type: deploy
@@ -49,16 +49,16 @@ jobs:
         #versionNumber: 700
 
 
-  - name: plv2-gkedeploy7
-    type: deploy
-    steps:
-      - IN: plv2-man4
-      - IN: gke-cluster
-      - IN: glab-kickstart
-      - IN: plv2-scale2
-      - IN: plv2-dopts1
-      - TASK: managed
-        deployMethod: upgrade
+ # - name: plv2-gkedeploy7
+  #  type: deploy
+   # steps:
+    #  - IN: plv2-man4
+     # - IN: gke-cluster
+    #  - IN: glab-kickstart
+     # - IN: plv2-scale2
+      #- IN: plv2-dopts1
+      #- TASK: managed
+       # deployMethod: upgrade
 
  # - name: plv2-tripubdeploy7
   #  type: deploy
