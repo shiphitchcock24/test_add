@@ -46,7 +46,7 @@ resources:
     type: image
     integration: ship4-docker
     pointer:
-      sourceName: "shiphitchcock1/pipelinev2"
+      sourceName: "shippabledocker/pipelinev2"
     seed:
       versionName: "deploy.1"
       
