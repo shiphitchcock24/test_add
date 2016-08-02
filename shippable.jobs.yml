@@ -10,6 +10,13 @@ jobs:
      # - echo 'this is on_success step of dv-man of type manifest'
     #on_failure:
      # - echo 'this is on_failure step of dv-man of type manifest'
+     
+  - name: plv2dcl-man
+    type: manifest
+    steps:
+      - IN: plv2-image12
+     # - IN: infra-repo
+      - IN: triggerv2sp2
   
  # - name: release-version7
   #  type: release
@@ -33,6 +40,13 @@ jobs:
       - IN: plv2-man4   
       - IN: cluster-dcl
       - TASK: managed
+      
+  - name: dcl-deploy1
+    type: deploy
+    steps:
+      - IN: plv2dcl-man  
+      - IN: cluster-dcl
+     # - TASK: managed
 
   #- name: plv2-ecsdeploy6
    # type: deploy
