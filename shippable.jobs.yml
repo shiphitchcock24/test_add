@@ -41,7 +41,7 @@ jobs:
       - IN: cluster-dcl
       - TASK: managed
       
-  - name: dcl-deploy12
+  - name: dcl-deploy121
     type: deploy
     steps:
       - IN: plv2dcl-man  
