@@ -14,6 +14,14 @@ resources:
     sourceName: "cluster-dcl"
     flags:
       - cluster-dcl
+      
+  - name: cluster-dclinavlid
+    type: cluster
+    integration: ship-dcl
+    pointer:
+    sourceName: "cluster-dcl"
+    flags:
+      - cluster-dcl
 
   - name: ecs-cluster
     type: cluster
