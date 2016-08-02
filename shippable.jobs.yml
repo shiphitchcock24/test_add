@@ -11,14 +11,14 @@ jobs:
     #on_failure:
      # - echo 'this is on_failure step of dv-man of type manifest'
   
- # - name: release-version6
-  #  type: release
-   # steps:
-    #  - IN: plv2-version
-     # - IN: plv2-man3
-      #- IN: triggerv2sp2
-      #- TASK: managed
-       # bump: major
+  - name: release-version7
+    type: release
+    steps:
+      - IN: plv2-version
+      - IN: plv2-man4
+      - IN: triggerv2sp2
+      - TASK: managed
+        bump: major
           
   #- name: plv2-ddcdeploy6
    # type: deploy
