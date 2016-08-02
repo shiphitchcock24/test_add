@@ -1,5 +1,5 @@
 jobs:
-  - name: plv2-man3
+  - name: plv2-man4
     type: manifest
     steps:
       - IN: plv2-image12
