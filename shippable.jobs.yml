@@ -55,8 +55,8 @@ jobs:
       - IN: plv2-man4
       - IN: gke-cluster
       - IN: glab-kickstart
-      #- IN: plv2-scale2
-     # - IN: plv2-dopts1
+      - IN: plv2-scale2
+      - IN: plv2-dopts1
       - TASK: managed
         deployMethod: upgrade
 
