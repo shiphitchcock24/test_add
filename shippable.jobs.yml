@@ -17,6 +17,19 @@ jobs:
       - IN: plv2-image12
      # - IN: infra-repo
       - IN: triggerv2sp2
+      
+  - name: plv2dcl2-manifest
+    type: manifest
+    steps:
+      - IN: plv2-image12
+     # - IN: infra-repo
+      - IN: triggerv2sp3
+        
+  - name: dcl-deployinvalid
+    type: deploy
+    steps:
+      - IN: plv2dcl2-manifest 
+      - IN: cluster-dclinvalid
   
  # - name: release-version7
   #  type: release
