@@ -6,7 +6,7 @@ triggers:
    - name: triggerv2sp2
      type: trigger
      version:
-       counter: 16
+       counter: 17
        
    - name: triggerv2sp3
      type: trigger
