@@ -59,7 +59,7 @@ jobs:
     steps:
       - IN: plv2dcl-man  
       - IN: cluster-dcl
-     # - TASK: managed
+      - TASK: managed
 
   #- name: plv2-ecsdeploy6
    # type: deploy
