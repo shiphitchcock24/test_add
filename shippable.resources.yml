@@ -123,6 +123,14 @@ resources:
     type: kickStart
     version: 
       counter: 1
+  
+  - name: flecs-dopts5
+    type: dockerOptions
+    version:
+      links:
+        - "fl-img5workingdir"
+      volumesFrom:
+        - "fl-img5workingdir:ro"
 
  # - name: infra-repo
   #  type: gitRepo
