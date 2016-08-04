@@ -11,7 +11,7 @@ jobs:
     #on_failure:
      # - echo 'this is on_failure step of dv-man of type manifest'
      
-  - name: plv2dcl-man
+  - name: plv2dcl-man1
     type: manifest
     steps:
       - IN: plv2-image12
@@ -54,10 +54,10 @@ jobs:
       - IN: cluster-dcl
       - TASK: managed
       
-  - name: dcl-deploy121
+  - name: dcl-deployvault
     type: deploy
     steps:
-      - IN: plv2dcl-man  
+      - IN: plv2dcl-man1
       - IN: cluster-dcl
       - TASK: managed
 
