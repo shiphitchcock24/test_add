@@ -40,7 +40,7 @@ jobs:
       - TASK: managed
     #  bump: major
           
-  - name: plv2-ddcdeployvault
+  - name: plv2-ddcdeployvault1
     type: deploy
     steps:
       - IN: plv2-man4
