@@ -87,7 +87,7 @@ jobs:
       - TASK: managed
         deployMethod: upgrade
 
-  - name: plv2-tripubdeployvaultIN0
+  - name: plv2-tripubdeployvaultins
     type: deploy
     steps: 
       - IN: plv2-man4
