@@ -64,7 +64,7 @@ jobs:
   - name: plv2-ecsdeploy6
     type: deploy
     steps:
-      - IN: plv2-man3
+      - IN: plv2-man4
       - IN: ecs-cluster
       - IN: glab-kickstart
       - TASK: managed
