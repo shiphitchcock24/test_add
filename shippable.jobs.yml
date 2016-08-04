@@ -61,18 +61,18 @@ jobs:
       - IN: cluster-dcl
       - TASK: managed
 
-  #- name: plv2-ecsdeploy6
-   # type: deploy
-    #steps:
-      #- IN: plv2-man3
-      #- IN: ecs-cluster
-      #- IN: glab-kickstart
-      #- TASK: managed
+  - name: plv2-ecsdeploy6
+    type: deploy
+    steps:
+      - IN: plv2-man3
+      - IN: ecs-cluster
+      - IN: glab-kickstart
+      - TASK: managed
         #deployMethod: upgrade
-    #on_success:
-     # - NOTIFY: myEmail
-    #on_failure:
-     # - NOTIFY: myEmail
+    on_success:
+      - NOTIFY: myEmail
+    on_failure:
+      - NOTIFY: myEmail
         #versionNumber: 700
 
 
