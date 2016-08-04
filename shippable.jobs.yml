@@ -31,14 +31,14 @@ jobs:
       - IN: plv2dcl2-manifest 
       - IN: cluster-dclinavlid
   
- # - name: release-version7
-  #  type: release
-   # steps:
-    #  - IN: plv2-version
-     # - IN: plv2-man4
-    #  - IN: triggerv2sp2
-     # - TASK: managed
-      #  bump: major
+  - name: release-versionvalut
+    type: release
+    steps:
+      - IN: plv2-version
+      - IN: plv2-man4
+      #- IN: triggerv2sp2
+      - TASK: managed
+    #  bump: major
           
   - name: plv2-ddcdeployvault
     type: deploy
