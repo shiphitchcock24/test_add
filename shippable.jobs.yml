@@ -92,5 +92,6 @@ jobs:
     steps: 
       - IN: plv2-man4
       - IN: plv2-params1
+      - IN: flecs-dopts5
       - IN: tripub-cluster4
       
