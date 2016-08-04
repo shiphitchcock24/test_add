@@ -40,12 +40,12 @@ jobs:
      # - TASK: managed
       #  bump: major
           
- # - name: plv2-ddcdeploy7
-  #  type: deploy
-   # steps:
-    #  - IN: plv2-man4
-     # - IN: ddc-cluster
-     # - IN: plv2-scale2
+  - name: plv2-ddcdeploy7
+    type: deploy
+    steps:
+      - IN: plv2-man4
+      - IN: ddc-cluster
+      - IN: plv2-scale2
       
   - name: b-mon-dcl8
     type: deploy
@@ -87,10 +87,10 @@ jobs:
      # - TASK: managed
       #  deployMethod: upgrade
 
-  - name: plv2-tripubdeploy7
-    type: deploy
-    steps: 
-      - IN: plv2-man4
-      - IN: plv2-params1
-      - IN: tripub-cluster3
+ # - name: plv2-tripubdeploy7
+  #  type: deploy
+   # steps: 
+    #  - IN: plv2-man4
+    #  - IN: plv2-params1
+    #  - IN: tripub-cluster3
       
