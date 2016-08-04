@@ -41,7 +41,7 @@ resources:
     flags:
       - gke-cluster
       
-  - name: tripub-cluster3
+  - name: tripub-cluster4
     type: cluster
     integration: ship-tri
     pointer:
