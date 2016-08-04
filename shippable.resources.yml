@@ -45,7 +45,7 @@ resources:
     type: cluster
     integration: ship-tri
     pointer:
-  sourceName: "default" # we can give anything it deploy instances based on region not by cluster name
+sourceName: "default" # we can give anything it deploy instances based on region not by cluster name
       region: "us-east-2"
     flags:
       - tripub-cluster3
