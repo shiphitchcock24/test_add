@@ -48,14 +48,14 @@ jobs:
       - IN: ddc-cluster
       - IN: plv2-scale2
       
-  - name: b-mon-dcl109
+  - name: b-mon-dcl109n
     type: deploy
     steps:
-      - IN: plv2-man45  
+      - IN: plv2-man5  
       - IN: cluster-dcl
       - TASK: managed
       
-  - name: dcl-deployvault
+  - name: dcl-deployvault7
     type: deploy
     steps:
       - IN: plv2dcl-man1
@@ -65,7 +65,7 @@ jobs:
   - name: plv2-ecsdeploy6
     type: deploy
     steps:
-      - IN: plv2-man4
+      - IN: plv2-man5
       - IN: ecs-cluster
       - IN: glab-kickstart
       - TASK: managed
@@ -77,7 +77,7 @@ jobs:
         #versionNumber: 700
 
 
-  - name: plv2-gkedeployvalt11
+  - name: plv2-gkedeployn5
     type: deploy
     steps:
       - IN: plv2-man5
