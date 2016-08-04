@@ -3,7 +3,7 @@ resources:
     type: cluster
     integration: ship-ddc1
     pointer:
-      sourceName : "nothing" #we can anything because it is mandatory but ddc doesnot have clusters
+            sourceName : "nothing" #we can anything because it is mandatory but ddc doesnot have clusters
     flags:
       - ddc-cluster
 
