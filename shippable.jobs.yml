@@ -1,9 +1,9 @@
 jobs:
-  - name: plv2-man4
+  - name: plv2-man5
     type: manifest
     steps:
       - IN: plv2-image12
-      - IN: flecs-dopts5
+    #  - IN: flecs-dopts5
      # - IN: infra-repo
       - IN: triggerv2sp1
     #  - IN: varsha
@@ -41,17 +41,17 @@ jobs:
       - TASK: managed
     #  bump: major
           
-  - name: plv2-ddcdeployvault1
+  - name: plv2-ddcdeployvault11
     type: deploy
     steps:
-      - IN: plv2-man4
+      - IN: plv2-man5
       - IN: ddc-cluster
       - IN: plv2-scale2
       
-  - name: b-mon-dcl108
+  - name: b-mon-dcl109
     type: deploy
     steps:
-      - IN: plv2-man4   
+      - IN: plv2-man45  
       - IN: cluster-dcl
       - TASK: managed
       
@@ -77,22 +77,22 @@ jobs:
         #versionNumber: 700
 
 
-  - name: plv2-gkedeployvalt
+  - name: plv2-gkedeployvalt11
     type: deploy
     steps:
-      - IN: plv2-man4
+      - IN: plv2-man5
       - IN: gke-cluster
       - IN: glab-kickstart
      # - IN: plv2-scale2
       - IN: plv2-dopts1
       - TASK: managed
-        deployMethod: upgrade
+       # deployMethod: upgrade
 
-  - name: plv2-tripubdeployvaultins
+  - name: plv2-tripubdeploy126
     type: deploy
     steps: 
-      - IN: flecs-dopts5
-      - IN: plv2-man4
+      #- IN: flecs-dopts5
+      - IN: plv2-man5
       - IN: plv2-params1
      # - IN: flecs-dopts5
       - IN: tripub-cluster4
