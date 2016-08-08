@@ -91,7 +91,7 @@ jobs:
   - name: plv2-tripubdeployn6
     type: deploy
     steps: 
-      - IN: flecs-dopts5
+      #- IN: flecs-dopts5
       - IN: plv2-man5
       - IN: plv2-params1
      # - IN: flecs-dopts5
