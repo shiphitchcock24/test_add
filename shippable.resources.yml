@@ -131,6 +131,13 @@ resources:
         - "fl-img5workingdir"
       volumesFrom:
         - "fl-img5workingdir:ro"
+        
+  - name: foo-resource
+    type: params
+    version:
+      params:
+        foo: bar
+        secure: idfhviufdvidflvjsdjvdshvigvdj
 
  # - name: infra-repo
   #  type: gitRepo
