@@ -88,7 +88,7 @@ jobs:
       - TASK: managed
        # deployMethod: upgrade
 
-  - name: plv2-tripubdeployn8
+  - name: plv2-tripubdeployP1
     type: deploy
     steps: 
      # - IN: flecs-dopts5
