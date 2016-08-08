@@ -77,13 +77,13 @@ jobs:
         #versionNumber: 700
 
 
-  - name: plv2-gkedeployn5
+  - name: plv2-gkedeployn6
     type: deploy
     steps:
       - IN: plv2-man5
       - IN: gke-cluster
       - IN: glab-kickstart
-     # - IN: plv2-scale2
+      - IN: plv2-scale2
       - IN: plv2-dopts1
       - TASK: managed
        # deployMethod: upgrade
