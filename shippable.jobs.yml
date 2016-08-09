@@ -3,10 +3,10 @@ jobs:
     type: manifest
     steps:
       - IN: plv2-image12
-      - IN: plv2-envimage
+      #- IN: plv2-envimage
       - IN: plv2-params1
-        applyTo:
-          - plv2-envimage
+       # applyTo:
+        #  - plv2-envimage
     #  - IN: flecs-dopts5
      # - IN: infra-repo
       - IN: triggerv2sp1
