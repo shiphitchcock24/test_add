@@ -3,6 +3,10 @@ jobs:
     type: manifest
     steps:
       - IN: plv2-image12
+      - IN: plv2-envimage
+      - IN: plv2-params1
+        applyTo:
+          - plv2-envimage
     #  - IN: flecs-dopts5
      # - IN: infra-repo
       - IN: triggerv2sp1
@@ -88,12 +92,12 @@ jobs:
       - TASK: managed
        # deployMethod: upgrade
 
-  - name: plv2-tripubdeployP2
+  - name: plv2-tripubdeployP3
     type: deploy
     steps: 
       - IN: foo-resource
       - IN: plv2-man5
-      - IN: plv2-params1
+      
       #- IN: flecs-dopts5
       - IN: tripub-cluster4
       
