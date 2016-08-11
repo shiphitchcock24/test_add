@@ -137,7 +137,7 @@ resources:
     version:
       params:
         foo: bar
-        secure: testnewFfoITh21fnJk71mk+PZXmGtDX9BnwQnh1tkwBhTrpJJCYzzjZ8BmVQIeieEXqnK2czWVfzwzpu9LKbAyOgpreVzjK7gzs1UyVw6qBmUjFfjLZ87aeFH9Ph6nF3qPEqI/oU2SvFSyDAWTd+R5BfDEpuH9fG/XRJGWS8n3w4PmkZjjxA013B1m/pYDELmKxPzYmFCkQxR6PwM5mqiu286j+zniE09OtvK1Wu3hIwUsp1UA65HCfVVTC1PYi9mg+JG1q2V0UtMvKejERI002V7cO+ZWODwCE7rUpq/rXDcx8xyWEFG+w6NDY4NlSZ0wGJPZY7VmRzwyWOmgyx5d7XXn1Q==
+        secure: FfoITh21fnJk71mk+PZXmGtDX9BnwQnh1tkwBhTrpJJCYzzjZ8BmVQIeieEXqnK2czWVfzwzpu9LKbAyOgpreVzjK7gzs1UyVw6qBmUjFfjLZ87aeFH9Ph6nF3qPEqI/oU2SvFSyDAWTd+R5BfDEpuH9fG/XRJGWS8n3w4PmkZjjxA013B1m/pYDELmKxPzYmFCkQxR6PwM5mqiu286j+zniE09OtvK1Wu3hIwUsp1UA65HCfVVTC1PYi9mg+JG1q2V0UtMvKejERI002V7cO+ZWODwCE7rUpq/rXDcx8xyWEFG+w6NDY4NlSZ0wGJPZY7VmRzwyWOmgyx5d7XXn1Q==
   - name: plv2-envimage
     type: image
     integration: ship4-docker
