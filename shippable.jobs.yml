@@ -95,9 +95,8 @@ jobs:
   - name: plv2-tripubdeployP4
     type: deploy
     steps: 
-      #- IN: foo-resource
+      - IN: foo-resource
       - IN: plv2-man5
-      
-      - IN: flecs-dopts5
+      #- IN: flecs-dopts5
       - IN: tripub-cluster4
       
