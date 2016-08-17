@@ -11,7 +11,7 @@ resources:
     type: cluster
     integration: ship-dcl
     pointer:
-    sourceName: "cluster-dcl"
+      sourceName: "cluster-dcl"
     flags:
       - cluster-dcl
       
@@ -19,7 +19,7 @@ resources:
     type: cluster
     integration: ship-dcl
     pointer:
-    sourceName: "cluster-dcl"
+      sourceName: "cluster-dcl"
     flags:
       - cluster-dcl
 
