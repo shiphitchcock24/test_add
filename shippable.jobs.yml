@@ -71,7 +71,7 @@ jobs:
     steps:
       - IN: plv2-man5
       - IN: ecs-cluster
-      - IN: glab-kickstart
+     # - IN: glab-kickstart
       - TASK: managed
         #deployMethod: upgrade
     on_success:
