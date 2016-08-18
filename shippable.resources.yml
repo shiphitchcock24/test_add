@@ -119,10 +119,10 @@ resources:
     seed:
       versionName: "1.1.1-beta"
       
-  - name: glab-kickstart
-    type: kickStart
-    version: 
-      counter: 1
+  # - name: glab-kickstart
+  #   type: kickStart
+  #   version: 
+  #     counter: 1
   
   - name: flecs-dopts5
     type: dockerOptions
