@@ -4,7 +4,7 @@ resources:
     integration: github
     pointer:
       sourceName: shiptests1/sample-script-3
-    #  branch: master
+      branch: master
 
  
 
