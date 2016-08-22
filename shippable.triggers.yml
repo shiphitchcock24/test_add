@@ -1,14 +1,5 @@
 triggers:
-   - name: triggerv2sp1
+   - name: triggership1
      type: trigger
      version:
        counter: 940
-   - name: triggerv2sp2
-     type: trigger
-     version:
-       counter: 180
-       
-   - name: triggerv2sp3
-     type: trigger
-     version:
-       counter: 166
