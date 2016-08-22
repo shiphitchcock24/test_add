@@ -2,6 +2,5 @@ jobs:
   - name: plv2-man5
     type: manifest
     steps:
-      - IN: plv2-image12SRE
-      #- IN: plv2-envimage
-      - IN: plv2-params1
+      - IN: sample-gitRepo
+      - IN: triggership1
