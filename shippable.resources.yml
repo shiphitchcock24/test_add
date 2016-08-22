@@ -5,6 +5,13 @@ resources:
     pointer:
       sourceName: shiptests1/sample-script-3
       branch: master
+      
+  - name: sample-gitRepo1
+    type: gitRepo
+    integration: github
+    pointer:
+      sourceName: shiptests1/sample-script-3
+      branch: master
 
  
 
