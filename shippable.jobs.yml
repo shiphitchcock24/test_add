@@ -1,5 +1,5 @@
 jobs:
-  - name: plv2-man6
+  - name: plv2-man61
     type: manifest
     steps:
       - IN: sample-gitRepo
