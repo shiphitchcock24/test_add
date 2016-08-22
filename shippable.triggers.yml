@@ -2,4 +2,4 @@ triggers:
    - name: triggership1
      type: trigger
      version:
-       counter: 941
+       counter: 942
