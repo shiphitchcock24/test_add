@@ -3,8 +3,8 @@ resources:
     type: gitRepo
     integration: github
     pointer:
-      sourceName: shiptests11/sample-script-3
-      branch: master
+      sourceName: shiptests1/sample-script-3
+    #  branch: master
 
  
 
