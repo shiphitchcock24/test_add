@@ -1,7 +1,7 @@
 jobs:
-  - name: plv2-man5
+  - name: plv2-man6
     type: manifest
     steps:
       - IN: sample-gitRepo
-      - IN: sample-gitRepo
+     # - IN: sample-gitRepo
       - IN: triggership1
