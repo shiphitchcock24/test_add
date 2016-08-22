@@ -1,7 +1,7 @@
 resources:
   - name: sample-gitRepo
     type: gitRepo
-    integration: github1
+    integration: github
     pointer:
       sourceName: shiptests11/sample-script-3
       branch: master
