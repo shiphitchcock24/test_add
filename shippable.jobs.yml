@@ -3,5 +3,5 @@ jobs:
     type: manifest
     steps:
       - IN: sample-gitRepo
-      - IN: sample-gitRepo
+     # - IN: sample-gitRepo
       - IN: triggership1
