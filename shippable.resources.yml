@@ -1,6 +1,6 @@
 resources:
   - name: sample-gitRepo
-    type: gitrepo
+    #type: gitrepo
     integration: github
     pointer:
       sourceName: shiptests1/sample-script-3
